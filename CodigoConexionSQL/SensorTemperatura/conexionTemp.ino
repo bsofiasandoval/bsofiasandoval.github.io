@@ -39,7 +39,7 @@ void setup() {
   delay(100);
 }
 
-String getStatusTemp(float temp){
+String getStatusTempH(float temp){
   if (temp < 20) {
         return "bajo";
     } else if (temp < 30) {
