@@ -1,8 +1,8 @@
 #include <ESP8266WiFi.h>
 
 // cosas para el sensor ultrasonico
-const int trigPin = 2; // d4
-const int echoPin = 0; // d3
+#define trigPin D8  // Trig pin (GPIO 15)
+#define echoPin D7  // Echo pin (GPIO 13)
 long duration;
 int distance;
 
@@ -18,8 +18,10 @@ int c = 0;
 
 void setup() {
   Serial.begin(9600);
+
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
+
   WiFi.begin(ssid, password);
   
   Serial.println("Connecting");
@@ -34,24 +36,26 @@ void setup() {
   Serial.println(WiFi.localIP());
 }
 
-void loop() {
-  Serial.print("\nValor = ");
-  Serial.println(c++);
-  
-  // Clears the trigPin
+long getDistance(){
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
-
-  // Sets the trigPin on HIGH state for 10 micro seconds
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
 
-  // Reads the echoPin, returns the sound wave travel time in microseconds
-  duration = pulseIn(echoPin, HIGH);
+  duration= pulseIn(echoPin, HIGH);
+  distance = duration * 0.034 / 2; // Calculate distance in centimeters
+  return distance;
+}
 
+void loop() {
+  Serial.print("\nValor = ");
+  Serial.println(c++);
+  
   // Calculating the distance
-  distance= duration*0.034/2;
+  distance= getDistance();
+  Serial.print("Distance: ");
+  Serial.println(distance);
   
   
   unsigned long currentMillis = millis();
