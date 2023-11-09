@@ -20,7 +20,7 @@ $stmt = mysqli_prepare($conexion, $consulta);
 // Check if the statement was prepared correctly
 if ($stmt) {
     // Bind the integer value of 'contador', the float value of 'temperatura', and the string value of 'status' to the placeholders in the SQL statement
-    mysqli_stmt_bind_param($stmt, "ids", $contador, $distancia);
+    mysqli_stmt_bind_param($stmt, "id", $contador, $distancia);
 
     // Execute the SQL statement
     mysqli_stmt_execute($stmt);
