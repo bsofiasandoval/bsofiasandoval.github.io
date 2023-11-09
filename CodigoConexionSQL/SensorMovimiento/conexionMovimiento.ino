@@ -8,9 +8,9 @@ int buzzer_pin = D4;   // Pin D4 en NodeMCU para el zumbador
 int moving;
 
 // datos para la conexion a internet
-const char* ssid = "David-IoT";// SSID, the name of your WiFi connection
-const char* password = "tumama123";// password of the WiFi
-const char* host = "172.20.10.3";// IP server, obtained with 'ipconfig' in command shell
+const char* ssid = "Sofi-IoT";// SSID, the name of your WiFi connection
+const char* password = "password";// password of the WiFi
+const char* host = "172.20.10.11";// IP server, obtained with 'ipconfig' in command shell
 const int port = 80;// server port, configured in xampp for Apache server, default is: 80
 
 const int watchdog = 5000;// watchdog frequency, reconnect timeout
