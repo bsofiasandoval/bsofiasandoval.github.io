@@ -1,1 +1,2 @@
-Primer codigo Potenciometro, hecho por Juan Jose Castillo González
+Primer codigo potenciometro, hecho por Juan Jose Castillo González
+ y Brenda Sofia Sandoval
