@@ -27,7 +27,7 @@ void postToAPI(float temp, float hum){
   content += "Humidity: ";
   content += hum;
   content += "%\\n";
-  content += "Please respond (GOOD conditions :D) or (BAD conditions :() if conditions are suitable or not suitable for asthma patients based on this data. Do not reprint given data.";
+  content += "Please respond GOOD conditions :D or BAD conditions :( if conditions are suitable or not suitable for asthma patients based on this data. Do not reprint data given.";
 
   // Populate the JSON Document
   doc["model"] = "gpt-3.5-turbo";
@@ -49,7 +49,7 @@ void postToAPI(float temp, float hum){
 
   HTTPClient http;
   http.begin("https://api.openai.com/v1/chat/completions");
-  http.addHeader("Authorization", "Bearer INSERT_API_KEY");  // Reemplaza con tu clave de API de OpenAI
+  http.addHeader("Authorization", "Bearer API_KEY_AQUIII");  // Reemplaza con tu clave de API de OpenAI
   http.addHeader("Content-Type", "application/json");
   int httpCode = http.POST(jsonPayload);
   String payload = http.getString();
@@ -142,3 +142,4 @@ void loop() {
   delay(5000); // this speeds up the simulation
   
 }
+
