@@ -51,7 +51,7 @@ void postToAPI(float temp, float hum){
 
   HTTPClient http;
   http.begin("https://api.openai.com/v1/chat/completions");
-  http.addHeader("Authorization", "Bearer API_KEY_AQUIII");  // Reemplaza con tu clave de API de OpenAI
+  http.addHeader("Authorization", "Bearer API_KEY_AQUIII");  // OPEN AI KEY HERE
   http.addHeader("Content-Type", "application/json");
   int httpCode = http.POST(jsonPayload);
   String payload = http.getString();
