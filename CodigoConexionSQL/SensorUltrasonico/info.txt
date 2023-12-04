@@ -1,2 +1,0 @@
-Codigo para conectar sensor ultrasonico a base de datos hecho por Nicolas Mendoza Peña
-y Brenda Sofia Sandoval

@@ -1,2 +1,0 @@
-Codigo creado para conectar sensor de temperatura y humedad a base de datos
-hecho por Brenda Sofia Sandoval

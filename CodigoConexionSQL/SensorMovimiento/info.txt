@@ -1,2 +1,0 @@
-Codigo para conectar sensor movimiento a base de datos, hecho por David Zamora Cantu 
-y Brenda Sofia Sandoval
