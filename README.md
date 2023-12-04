@@ -1,4 +1,12 @@
-# IoTstuff
-## Codigos para la conexión de sensores a una base de datos de SQL
-## TC1004B Grupo 504
-### A00838209 Brenda Sofia Sandoval
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+</head>
+<body>
+    <h1>Welcome to My Portfolio</h1>
+    <!-- You can add more content here like sections for your projects, about me, etc. -->
+</body>
+</html>
